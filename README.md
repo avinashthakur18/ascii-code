@@ -1,36 +1,133 @@
-# ASCII Art (TT PROJECT 2) ✅
+# ASCII Art (TT PROJECT 2) 🎨🐍
 
-A tiny Python script that reconstructs and prints a large ASCII art image from a run-length encoded (RLE) representation.
-
-## Quick start 🔧
-
-- Run:
-
-```bash
-python -u "asciiart.py"
-```
-
-- The script prints the ASCII art directly to stdout.
-
-## How it works 💡
-
-- The RLE data is stored in `RLE_TEXT` (a triple-quoted block) and parsed at runtime into a `rle` list of `(count, char)` tuples.
-- `reconstruct_ascii_from_rle()` iterates rows and groups to build and print each line.
-
-## Editing the artwork ✏️
-
-- You can edit `RLE_TEXT` directly, or replace it with a valid Python `rle = [...]` literal (ensure commas are present between rows).
-- If you want, I can restore the original literal form (fix missing commas) so the file contains a Python list instead of a parsed string.
-
-## Troubleshooting ⚠️
-
-- If the program prints nothing or errors on startup, run it with `-u` to avoid buffering: `python -u "asciiart.py"`.
-- If you see a `SyntaxError`, open `asciiart.py` and ensure `RLE_TEXT` is intact.
-
-## Contributing 🤝
-
-- Feel free to open edits or request improvements (unit tests, recovery of the original literal, or more documentation).
+A lightweight Python project that reconstructs and prints a large ASCII art image using **Run-Length Encoding (RLE)**. The project demonstrates basic data compression concepts, string processing, and clean terminal output.
 
 ---
 
-*Generated/updated by GitHub Copilot.*
+📌 Project Overview
+
+**Project Title:** ASCII Art using Run-Length Encoding
+**Project Code:** TT PROJECT 2
+**Language Used:** Python
+**Output:** ASCII Art printed on terminal (stdout)
+
+This project stores ASCII art in a compressed **RLE format** and reconstructs it at runtime. Instead of storing every character, it stores *(count, character)* pairs to reduce size and improve readability of large artworks.
+
+---
+
+ 🎯 Objectives
+
+* Understand **Run-Length Encoding (RLE)** as a basic compression technique
+* Learn how to process structured text data in Python
+* Practice string manipulation and iteration
+* Generate large ASCII art efficiently
+
+---
+
+🧠 How It Works
+
+1. **RLE_TEXT**
+
+   * A triple-quoted string containing encoded data
+   * Each entry represents how many times a character repeats
+
+2. **Parsing Phase**
+
+   * The RLE text is parsed into a list of tuples: `(count, character)`
+
+3. **Reconstruction Phase**
+
+   * The script expands each tuple
+   * Characters are printed row-by-row to form the final ASCII art
+
+---
+
+🛠️ Technologies Used
+
+* Python 3.x
+* Standard Python libraries only
+* Runs on any OS (Windows / Linux / macOS)
+
+---
+
+📂 Project Structure
+
+```
+ASCII-Art-TT-Project-2/
+│
+├── asciiart.py        # Main Python script
+├── README.md          # Project documentation
+└── RLE_TEXT (inside script)
+```
+
+---
+
+ ▶️ How to Run the Project
+
+🔧 Prerequisites
+
+* Python 3 installed
+
+ ▶️ Execution Command
+
+```bash
+python -u asciiart.py
+```
+
+The ASCII art will be printed directly in the terminal.
+
+---
+
+ ✏️ Editing the Artwork
+
+You can customize the ASCII art easily:
+
+* Open `asciiart.py`
+* Modify the `RLE_TEXT` block
+* Ensure the `(count, character)` format is preserved
+
+Example:
+
+```
+5 *
+3 #
+10 .
+```
+
+ 💡 Key Concepts Demonstrated
+
+* Run-Length Encoding (RLE)
+* Efficient storage of repetitive data
+* String reconstruction
+* Looping and parsing in Python
+
+ ✅ Advantages
+
+* Memory-efficient
+* Easy to modify artwork
+* Simple logic, beginner-friendly
+* No external dependencies
+
+🚀 Future Enhancements (Optional)
+
+* Add file input/output support
+* Add color using ANSI escape codes
+* Support multiple ASCII artworks
+* Convert image → ASCII → RLE automatically
+
+👨‍🎓 Academic Use
+
+This project is suitable for:
+
+* Python mini project
+* Data compression basics
+* Terminal-based applications
+* College practical / TT Project submission
+
+
+
+📌 Author
+
+**Avinash Thakur**
+B.Tech (AI/ML)
+
